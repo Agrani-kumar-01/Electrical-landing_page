@@ -41,16 +41,19 @@
 
 .hero-section{
     position: relative;
-}
-
-.hero-img{
-    min-height: 100vh;
-    /* border: 5px solid black; */
+    background-attachment: fixed;
     overflow: hidden;
 }
 
+.hero-img {
+    min-height: 100vh;
+    /* border: 5px solid black; */
+    overflow: hidden;
+    background-size: cover;
+}
+
 .slide{
-    /* background-image: url(images/bermix-studio-bAGo7O4prtY-unsplash.jpg); */
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     max-height: 100%;
@@ -125,7 +128,9 @@
 
 .about-img img{
     background-size: cover;
+    max-width: 100%;
     max-height: 80vh;
+    background-attachment: fixed; 
 }
 
 .about-content{
@@ -474,13 +479,17 @@ ul{
 @media(max-width:786px){
     .about{
         flex-direction: column;
-        min-height: 40vh;
-        align-items: center;
+        padding: 10px;
     }
     .about-content{
         margin: 20px;
         font-size: medium;
     }
+    .services{
+        padding: 10px;
+        padding-top: 30px;
+    }
+
     .services-content{
         flex-direction: column;
     }
@@ -488,7 +497,6 @@ ul{
     .services-cards{
         flex-direction: column;
         align-items: center;
-        min-width: 100%;
     }
 
     .services-cards .card{
@@ -497,6 +505,12 @@ ul{
     .services-btns{
         margin-left: 37%;
     }
+
+    .choose{
+        padding: 10px;
+        padding-top: 30px;
+    }
+
     .choose-content,.choose-cards{
         flex-direction: column;
         align-self: center;
