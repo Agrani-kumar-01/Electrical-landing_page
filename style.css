@@ -423,7 +423,10 @@ ul{
     .about-img img{
         max-width: 100%;
     }
-
+    .about-content p{
+        font-size: 1.4em;
+        font-weight: 350;
+    }
     .about-content{
         margin: 10px;
         font-size: medium;
