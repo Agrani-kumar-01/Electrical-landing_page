@@ -4,10 +4,7 @@
     padding: 0;
 }
 
-
-
 .navbar-brand img{
-    background-size: contain;
     height: 40px;
 }
 
@@ -16,7 +13,7 @@
 }
 
 .container{
-    max-width: 1200px;
+    min-width: 1200px;
 }
 
 .btn .fa-arrow-up{
@@ -28,15 +25,20 @@
 }
 
 .line{
-    border: 2px solid #ff8800;
     width: 10vh;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
-.about-line{
+.blue-line{
     border: 2px solid rgb(35, 35, 230);
-    width: 10vh;
-    margin-top: 5px;
+}
+
+.white-line{
+    border: 2px solid white;
+}
+
+.orange-line{
+    border: 2px solid #ff8800;
 }
 
 .hero-section{
@@ -47,18 +49,11 @@
 
 .hero-img {
     min-height: 100vh;
-    /* border: 5px solid black; */
-    overflow: hidden;
-    background-size: cover;
 }
 
 .slide{
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
     max-height: 100%;
     min-width: 100%;
-    color: white;
     position: absolute;
     transition: 1s;
 }
@@ -99,23 +94,21 @@
     position: absolute;
     top: 50% ;
     left: 1.5%;
-    border-radius: 50% !important;
-    border: none;
-    background: none;
-    opacity: 0.5;
 }
 
 .hero-content .right{
     position: absolute;
     top: 50% ;
     right: 2%;
-    border-radius: 50% !important;
+}
+
+.btn-dark{
     border: none;
-    background: none;
+    background: none !important;
     opacity: 0.5;
 }
 
-.hero-content .btn-dark:hover{
+.btn-dark:hover{
     opacity: 1;
 }
 
@@ -129,7 +122,6 @@
 .about-img img{
     background-size: cover;
     max-height: 80vh;
-    background-attachment: fixed; 
 }
 
 .about-content{
@@ -171,8 +163,7 @@
 
 .services-cards{
     display: flex;
-    justify-content: space-evenly;
-    
+    justify-content: space-between;
 }
 
 .services-cards .card{
@@ -188,14 +179,6 @@
     transition: 0.2s ease-in-out;
 }
 
-.services-cards .card img{
-    background-size: cover !important;
-}
-
-.services-cards .card .card-body{
-    height: 200px;
-}
-
 .card-body .btn{
     background: none;
     color: black;
@@ -204,51 +187,21 @@
     margin-top: 40px !important;
 }
 
-.services-cards .card1 .card-body{
+.services-cards .card1 .card-body, .services-cards .card3 .card-body{
     background-color: white;
 }
 
-.services-cards .card2 .card-body{
+.services-cards .card2 .card-body,.services-cards .card4 .card-body{
     background-color: #ff8800;
 }
 
-.services-cards .card3 .card-body{
-    background-color: white;
-}
-
-.services-cards .card4 .card-body{
-    background-color: #ff8800;
-}
-
-.card1-line,
-.card3-line{
-    border: 2px solid rgb(35, 35, 230);
-    width: 10vh;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-.card2-line,
-.card4-line{
-    border: 2px solid white;
-    width: 10vh;
-    margin-top: 10px;
-    margin-bottom: 20px;
+.services-cards .card .card-body .card-title{
+    margin-top: 30px;
 }
 
 .services-btns{
     margin-left: 47%;
     margin-top: 30px;
-}
-
-.services-btns .btn{
-    background: none;
-    border: none;
-    opacity: 0.5;
-}
-
-.services-btns .btn:hover{
-    opacity: 1;
 }
 
 .choose{
@@ -260,7 +213,6 @@
 .choose-cards{
     display: flex;
     justify-content: space-between;
-
 }
 
 .choose-content{
@@ -276,13 +228,7 @@
     font-size: 20px;
 }
 
-.choose-header h1 .about-line{
-    margin-top: 15px;
-}
-
 .choose-cards .card{
-    background: none;
-    min-height: 300px;
     box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
     transition: 0.2s ease-in-out;
 }
@@ -295,7 +241,6 @@
 
 .choose-cards .card img{
     max-width: 120px;
-    max-height: 100%;
 }
 
 footer{
@@ -327,18 +272,7 @@ footer{
     margin-top: 20px;
 }
 
-
-.link-lists ul li{
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.testimonials ul li{
-    font-size: 16px;
-    margin-top: 20px;
-}
-
-.contact-links ul li{
+.link-lists ul li, .contact-links ul li, .testimonials ul li{
     font-size: 16px;
     margin-top: 20px;
 }
@@ -435,6 +369,7 @@ footer{
 .schedule{
     height: 40vh;
     padding: 40px;
+    min-width: 100%;
 }
 
 .schedule h1{
@@ -457,7 +392,6 @@ footer{
     color: white;
 }
 
-
 .divider{
     height: 2px;
     min-width: 90%;
@@ -478,13 +412,16 @@ ul{
 @media(max-width:786px){
     .about{
         flex-direction: column;
-        padding: 10px;
+        padding: 0px;
+        margin-top: 10px;
     }
+
     .about-img img{
         max-width: 100%;
     }
+
     .about-content{
-        margin: 20px;
+        margin: 10px;
         font-size: medium;
     }
     .services{
@@ -499,6 +436,7 @@ ul{
     .services-cards{
         flex-direction: column;
         align-items: center;
+        margin: 0;
     }
 
     .services-cards .card{
@@ -536,7 +474,8 @@ ul{
     }
 
     .happy-header{
-        margin-left: 20%;
+        margin-left: 1rem;
+        text-align: center;
     }
     
     .happy-content{
@@ -562,11 +501,13 @@ ul{
     }
 
     .schedule h1{
-        margin-left: 25%;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .schedule-logo{
-        margin-left: 35%;
+        margin: 0 auto;
+        margin-top: 15px;
     }
     .footer-container{
         flex-direction: column;
